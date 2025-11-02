@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Ensaladazo!</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <link rel="stylesheet" href="./CSS/styles-Contacto.css">
+</head>
+
+<body>
+    <!-- HEADER CON NAVEGACIÓN -->
+    <header class="header">
+        <nav class="nav">
+            <!-- Logo -->
+            <div class="nav-brand">
+                <div class="logo-hover">
+                    <img class="logo-image" src="./Images/Logos/logo-removebg-preview.png" alt="logo Ensaladazo!">
+                </div>
+            </div>
+
+            <!-- Menú de navegación -->
+            <ul class="nav-menu">
+                <li><a href="/frontend/index.html" class="nav-link">Inicio</a></li>
+                <li><a href="/frontend/menu.html" class="nav-link">Menú</a></li>
+                <li><a href="/frontend/nosotros.html" class="nav-link">Nosotros</a></li>
+                <li><a href="/frontend/contacto.html" class="nav-link active">Contacto</a></li>
+            </ul>
+
+            <!-- Acciones usuario -->
+            <div class="cta-buttons nav-actions">
+                <a href="login.html" class="cta-button login-btn">Iniciar Sesión</a>
+                <a href="cart.html" class="cart-icon">
+                    <i data-lucide="shopping-cart" size="24"></i>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO DE CONTACTO -->
+    <section class="contact-hero">
+        <div class="hero-overlay"></div>
+        <div class="contact-hero-content">
+            <h1>¡Hablemos de <span class="highlight">Salud</span>!</h1>
+            <p class="contact-intro">
+                ¿Tienes preguntas, sugerencias o quieres hacer un pedido especial? 
+                Estamos aquí para ayudarte. Tu opinión nos ayuda a mejorar cada día.
+            </p>
+        </div>
+    </section>
+
+    <!-- INFORMACIÓN DE CONTACTO RÁPIDA -->
+    <section class="quick-contact">
+        <div class="container">
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="card-icon">
+                        <i data-lucide="map-pin" size="40"></i>
+                    </div>
+                    <h3>Visítanos</h3>
+                    <p>Av. Principal 123, Sonsonate</p>
+                    <p class="secondary">El Salvador</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="card-icon">
+                        <i data-lucide="phone" size="40"></i>
+                    </div>
+                    <h3>Llámanos</h3>
+                    <p>+503 2345-6789</p>
+                    <p class="secondary">Lun - Vie: 8AM - 6PM</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="card-icon">
+                        <i data-lucide="mail" size="40"></i>
+                    </div>
+                    <h3>Escríbenos</h3>
+                    <p>contacto@ensaladazo.com</p>
+                    <p class="secondary">Respuesta en 24h</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="card-icon">
+                        <i data-lucide="clock" size="40"></i>
+                    </div>
+                    <h3>Horarios</h3>
+                    <p>Lun - Vie: 8AM - 6PM</p>
+                    <p class="secondary">Sáb-Dom: 9AM - 3PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO DE CONTACTO -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-wrapper">
+                <div class="form-header">
+                    <h2>Envíanos un Mensaje</h2>
+                    <p>Completa el formulario y te responderemos lo antes posible</p>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">
+                                <i data-lucide="user" size="18"></i>
+                                Nombre Completo
+                            </label>
+                            <input 
+                                type="text" 
+                                id="nombre" 
+                                name="nombre" 
+                                placeholder="Ej: Juan Pérez"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">
+                                <i data-lucide="mail" size="18"></i>
+                                Correo Electrónico
+                            </label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder="tu@email.com"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="telefono">
+                                <i data-lucide="phone" size="18"></i>
+                                Teléfono (opcional)
+                            </label>
+                            <input 
+                                type="tel" 
+                                id="telefono" 
+                                name="telefono" 
+                                placeholder="2345-6789"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="asunto">
+                                <i data-lucide="tag" size="18"></i>
+                                Asunto
+                            </label>
+                            <select id="asunto" name="asunto" required>
+                                <option value="">Selecciona un asunto</option>
+                                <option value="consulta">Consulta General</option>
+                                <option value="pedido">Pedido Especial</option>
+                                <option value="sugerencia">Sugerencia</option>
+                                <option value="queja">Queja o Reclamo</option>
+                                <option value="alianza">Alianzas / Empresas</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">
+                            <i data-lucide="message-square" size="18"></i>
+                            Mensaje
+                        </label>
+                        <textarea 
+                            id="mensaje" 
+                            name="mensaje" 
+                            rows="6" 
+                            placeholder="Cuéntanos cómo podemos ayudarte..."
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <i data-lucide="send" size="20"></i>
+                        Enviar Mensaje
+                    </button>
+
+                    <div class="form-message" id="formMessage"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE MAPA -->
+    <section class="map-section">
+        <div class="container">
+            <h2>Encuéntranos</h2>
+            <p class="map-intro">Visita nuestro local y prueba la frescura de nuestras ensaladas</p>
+            
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <i data-lucide="map" size="80"></i>
+                    <p>Mapa de ubicación</p>
+                    <p class="map-address">Av. Principal 123, Sonsonate, El Salvador</p>
+                    <!-- Aquí puedes integrar Google Maps o similar -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE PREGUNTAS FRECUENTES -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i data-lucide="help-circle" size="24"></i>
+                        <h3>¿Hacen entregas a domicilio?</h3>
+                    </div>
+                    <p class="faq-answer">
+                        Sí, hacemos entregas en un radio de 5km del local. 
+                        Puedes hacer tu pedido por teléfono o WhatsApp.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i data-lucide="help-circle" size="24"></i>
+                        <h3>¿Puedo personalizar mi ensalada?</h3>
+                    </div>
+                    <p class="faq-answer">
+                        ¡Por supuesto! Con nuestro programa "Arma tu Ensaladazo" 
+                        puedes elegir todos los ingredientes que quieras.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i data-lucide="help-circle" size="24"></i>
+                        <h3>¿Tienen opciones veganas?</h3>
+                    </div>
+                    <p class="faq-answer">
+                        Sí, todas nuestras ensaladas pueden prepararse en versión 
+                        vegana o vegetariana según tu preferencia.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i data-lucide="help-circle" size="24"></i>
+                        <h3>¿Hacen pedidos para empresas?</h3>
+                    </div>
+                    <p class="faq-answer">
+                        Sí, ofrecemos servicios para eventos corporativos y 
+                        pedidos especiales. Contáctanos para más información.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REDES SOCIALES -->
+    <section class="social-section">
+        <div class="container">
+            <h2>Síguenos en Redes</h2>
+            <p>Mantente al día con nuestras promociones y novedades</p>
+            
+            <div class="social-links">
+                <a href="#" class="social-btn facebook">
+                    <i data-lucide="facebook" size="24"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://www.instagram.com/ensaladazo?igsh=MTB6ZzhnZWU1M2hrZw==" class="social-btn instagram">
+                    <i data-lucide="instagram" size="24"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="#" class="social-btn whatsapp">
+                    <i data-lucide="message-circle" size="24"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="#" class="social-btn tiktok">
+                    <i data-lucide="music" size="24"></i>
+                    <span>TikTok</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo-hover">
+                        <img class="logo-image" src="./Images/Logos/logo-removebg-preview.png" alt="Logo Ensaladazo!">
+                    </div>
+                    <p>Nutrición fresca para tu vida diaria</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="Menu.html">Menú</a></li>
+                        <li><a href="Nosotros.html">Nosotros</a></li>
+                        <li><a href="Contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-info">
+                    <h4>Horarios</h4>
+                    <p>Lun - Vie: 8:00 AM - 6:00 PM</p>
+                    <p>Sábado: 9:00 AM - 4:00 PM</p>
+                    <p>Domingo: 10:00 AM - 3:00 PM</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ensaladazo!. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./JavaScript/Contacto.js"></script>
+    
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

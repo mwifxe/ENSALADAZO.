@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito | Ensaladazo!</title>
+
+  <!-- Estilos principales -->
+  <link rel="stylesheet" href="./CSS/styles-inicio.css">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Iconos -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <style>
+    body {
+      background-color: #f8faf8;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+    }
+
+    .section-title {
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #1a4731;
+    }
+
+    .cart-items {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      border-radius: 15px;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cart-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .cart-item img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-right: 15px;
+    }
+
+    .cart-item-info {
+      flex-grow: 1;
+    }
+
+    .cart-item-name {
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .cart-item-price {
+      color: #16a34a;
+      font-weight: 500;
+    }
+
+    .cart-summary {
+      margin-top: 2.5rem;
+      text-align: right;
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .btn-primary {
+      background-color: #16a34a;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #12873c;
+    }
+
+    .modal-content {
+      border-radius: 15px;
+    }
+
+    input.form-control {
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .header {
+      background-color: #fff;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-link {
+      color: #333 !important;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #16a34a !important;
+    }
+
+    .login-btn {
+      background-color: #16a34a;
+      color: white !important;
+      border-radius: 8px;
+      padding: 8px 16px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .login-btn:hover {
+      background-color: #12873c;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header fixed-top">
+    <nav class="nav container d-flex align-items-center justify-content-between py-3">
+      <div class="nav-brand d-flex align-items-center">
+        <img class="logo-image" src="/frontend/Images/Logos/logo-removebg-preview.png" alt="logo" style="height:60px;">
+      </div>
+
+      <ul class="nav-menu d-flex gap-4 mb-0 list-unstyled">
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="Menu.html" class="nav-link">Menú</a></li>
+        <li><a href="Nosotros.html" class="nav-link">Nosotros</a></li>
+        <li><a href="Contacto.html" class="nav-link">Contacto</a></li>
+      </ul>
+
+      <div class="cta-buttons">
+        <a href="login.html" class="login-btn">Iniciar Sesión</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="container" style="padding-top: 130px; padding-bottom: 50px;">
+    <h2 class="section-title">Tu Carrito</h2>
+
+    <div id="cart-items" class="cart-items">
+      <!-- Productos añadidos aparecerán aquí -->
+      <!-- Ejemplo (se reemplaza dinámicamente desde cart.js):
+      <div class="cart-item">
+        <img src="img/salad1.jpg" alt="Producto">
+        <div class="cart-item-info">
+          <div class="cart-item-name">Ensalada Mediterránea</div>
+          <div class="cart-item-price">$6.50</div>
+        </div>
+        <button class="btn btn-outline-danger btn-sm">Eliminar</button>
+      </div>
+      -->
+    </div>
+
+    <div class="cart-summary mt-4">
+      <h4>Total: $<span id="cart-total">0.00</span></h4>
+      <button class="btn-primary mt-3 w-100" id="checkout-btn">Proceder al Pago</button>
+    </div>
+  </main>
+
+  <!-- Modal de Pago -->
+  <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-4">
+        <h5 class="modal-title mb-3 text-center" id="checkoutLabel">Datos de Pago</h5>
+        <form id="checkout-form">
+          <input type="text" id="name" placeholder="Nombre completo" required class="form-control mb-2">
+          <input type="text" id="address" placeholder="Dirección" required class="form-control mb-2">
+          <input type="text" id="card-number" placeholder="Número de tarjeta" required class="form-control mb-2">
+          <input type="text" id="phone" placeholder="Número de contacto" required class="form-control mb-3">
+          <button type="submit" class="btn-primary w-100">Confirmar Pago</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./JavaScript/cart.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - Ensaladazo!</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <link rel="stylesheet" href="./CSS/styles-Nosotros.css">
+</head>
+
+<body>
+    <!-- HEADER CON NAVEGACIÓN -->
+    <header class="header">
+    <nav class="nav">
+        <!-- Logo -->
+        <div class="nav-brand">
+            <div class="logo-hover">
+                <img class="logo-image" src="./Images/Logos/logo-removebg-preview.png" alt="logo">
+            </div>
+        </div>
+
+        <!-- Menú de navegación -->
+        <ul class="nav-menu">
+            <li><a href="/frontend/index.html" class="nav-link">Inicio</a></li>
+            <li><a href="/frontend//menu.html" class="nav-link">Menú</a></li>
+            <li><a href="/frontend/nosotros.html" class="nav-link">Nosotros</a></li>
+            <li><a href="/frontend/contacto.html" class="nav-link">Contacto</a></li>
+        </ul>
+
+        <!-- Acciones usuario -->
+        <div class="cta-buttons nav-actions">
+            <a href="login.html" class="cta-button login-btn">Iniciar Sesión</a>
+            <a href="cart.html" class="cart-icon">
+                <i data-lucide="shopping-cart" size="24"></i>
+                <span class="cart-badge" id="cart-count">0</span>
+            </a>
+        </div>
+    </nav>
+</header>
+
+    <!-- HERO NOSOTROS -->
+    <section class="nosotros-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Nuestra <span class="highlight">Historia</span></h1>
+            <p class="hero-subtitle">Transformando la forma de alimentarse, un ensaladazo a la vez</p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: NUESTRA HISTORIA -->
+    <section class="our-story">
+        <div class="container">
+            <div class="story-content">
+                <div class="story-text">
+                    <h2>¿Cómo Nació Ensaladazo!?</h2>
+                    <p class="question">¿Y si comer aunque apurado pudiera ser sinónimo de salud, placer y conciencia?</p>
+                    <p>
+                        En Ensaladazo! estamos transformando la forma de alimentarse. Todo comenzó cuando nos dimos cuenta de un problema común: 
+                        estudiantes, trabajadores y personas activas que querían comer saludable, pero simplemente no encontraban opciones prácticas y accesibles.
+                    </p>
+                    <p>
+                        Detectamos que muchos jóvenes desde los 16 años, adultos que trabajan de 8 a 5, y personas con dietas controladas compartían 
+                        el mismo desafío: poco tiempo para comer bien y opciones costosas o poco nutritivas.
+                    </p>
+                </div>
+                <div class="story-image">
+                    <div class="image-placeholder">
+                        <i data-lucide="sparkles" size="80"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: EL PROBLEMA -->
+    <section class="problem-section">
+        <div class="container">
+            <h2>El Problema que Identificamos</h2>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <i data-lucide="dollar-sign" size="50"></i>
+                    <h3>Alto Costo</h3>
+                    <p>Comer sano suele ser caro. Más de 130 millones en América Latina no pueden costear una dieta saludable.</p>
+                </div>
+                <div class="problem-card">
+                    <i data-lucide="clock" size="50"></i>
+                    <h3>Falta de Tiempo</h3>
+                    <p>El 60% de los adultos no mantiene una dieta equilibrada por falta de tiempo para preparar comidas nutritivas.</p>
+                </div>
+                <div class="problem-card">
+                    <i data-lucide="alert-circle" size="50"></i>
+                    <h3>Mala Nutrición</h3>
+                    <p>En El Salvador, 8 de cada 10 jóvenes no consumen frutas ni verduras a diario, afectando su energía y salud.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: LA SOLUCIÓN -->
+    <section class="solution-section">
+        <div class="container">
+            <div class="solution-content">
+                <div class="solution-image">
+                    <div class="image-placeholder">
+                        <i data-lucide="lightbulb" size="80"></i>
+                    </div>
+                </div>
+                <div class="solution-text">
+                    <h2>Nuestra Solución</h2>
+                    <p>
+                        Ensaladazo! es una propuesta práctica, saludable y moderna. Ofrecemos ensaladas frescas, nutritivas y listas para llevar 
+                        en envases ecoamigables, pensadas para quienes buscan comer bien sin perder tiempo.
+                    </p>
+                    <p>
+                        Somos una opción accesible, con precios justos y de calidad. Damos a cada cliente la oportunidad de 
+                        <strong>"Armar su Ensaladazo"</strong>, eligiendo los ingredientes que mejor se adapten a su gusto o estilo de vida.
+                    </p>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <i data-lucide="check-circle"></i>
+                            <span>Ingredientes locales de alta calidad</span>
+                        </div>
+                        <div class="feature-item">
+                            <i data-lucide="check-circle"></i>
+                            <span>Empaques 100% biodegradables</span>
+                        </div>
+                        <div class="feature-item">
+                            <i data-lucide="check-circle"></i>
+                            <span>Servicio ágil y pedidos digitales</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: INICIATIVAS -->
+    <section class="initiatives-section">
+        <div class="container">
+            <h2>Más que Ensaladas, una Experiencia</h2>
+            <p class="section-intro">No queremos quedarnos solo en vender comida, sino crear una experiencia que conecte con nuestros clientes y con el planeta.</p>
+            <div class="initiatives-grid">
+                <div class="initiative-card">
+                    <div class="initiative-icon">
+                        <i data-lucide="recycle" size="60"></i>
+                    </div>
+                    <h3>Programa "Ciclo Verde"</h3>
+                    <p>Premiamos a quienes devuelven sus empaques con descuentos o puntos acumulables, impulsando el cuidado ambiental.</p>
+                </div>
+                <div class="initiative-card">
+                    <div class="initiative-icon">
+                        <i data-lucide="trophy" size="60"></i>
+                    </div>
+                    <h3>Reto de 5 Días</h3>
+                    <p>Motivamos a comer saludable toda la semana, con recompensas para quienes completan el desafío.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: VALIDACIÓN -->
+    <section class="validation-section">
+        <div class="container">
+            <h2>Lo que Nuestros Clientes Piensan</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">75%</span>
+                    <p>Dice que comer saludable es importante pero no encuentra opciones prácticas</p>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">72.9%</span>
+                    <p>Aseguró que compraría nuestras ensaladas para cuidar su salud y bienestar</p>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">40%</span>
+                    <p>Su principal preocupación es la calidad y frescura de la comida</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: NUESTRO EQUIPO -->
+    <section class="team-section">
+        <div class="container">
+            <h2>Conoce a Nuestro Equipo</h2>
+            <p class="section-intro">Detrás de Ensaladazo! hay un equipo comprometido con un mismo propósito: hacer que comer saludable sea fácil, accesible y agradable para todos.</p>
+            
+            <div class="team-grid">
+                <!-- Miembro 1 -->
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="./Images/Equipo/Andy.png" alt="Andy Navarrete">
+                    </div>
+                    <h3>Andy Navarrete</h3>
+                    <p class="member-role">Dirección General y Estrategia</p>
+                    <p class="member-description">Asegura que todo avance con una visión clara y estratégica.</p>
+                </div>
+
+                <!-- Miembro 2 -->
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="./Images/Equipo/Heidy.png" alt="Heidy Martínez">
+                    </div>
+                    <h3>Heidy Martínez</h3>
+                    <p class="member-role">Comunicación y Marketing</p>
+                    <p class="member-description">Conecta con nuestros clientes y posiciona la marca.</p>
+                </div>
+
+                <!-- Miembro 3 -->
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="./Images/Equipo/Emely.png" alt="Emely Mendoza">
+                    </div>
+                    <h3>Emely Mendoza</h3>
+                    <p class="member-role">Operaciones y Logística</p>
+                    <p class="member-description">Garantiza organización, calidad y frescura de los productos.</p>
+                </div>
+
+                <!-- Miembro 4 -->
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="./Images/Equipo/Donald.png" alt="Donald Méndez">
+                    </div>
+                    <h3>Donald Méndez</h3>
+                    <p class="member-role">Finanzas y Costos</p>
+                    <p class="member-description">Mantiene precios accesibles sin comprometer calidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: CIERRE INSPIRADOR -->
+    <section class="closing-section">
+        <div class="container">
+            <div class="closing-content">
+                <h2>Comer Bien No Es un Lujo, Es un Estilo de Vida</h2>
+                <p>
+                    En Ensaladazo! creemos que comer saludable no tiene que ser complicado ni costoso. 
+                    Somos la respuesta a una necesidad real: la de personas activas que quieren alimentarse bien, 
+                    pero que no encuentran opciones prácticas, accesibles y frescas.
+                </p>
+                <p class="closing-highlight">
+                    Ensaladazo! combina lo mejor de dos mundos: la rapidez de la comida moderna con la calidad 
+                    de los ingredientes naturales, creando una experiencia saludable, fresca y personalizada.
+                </p>
+                <p class="tagline">Ensaladazo! — Tu energía empieza aquí.</p>
+                <button class="cta-large">Únete a Ensaladazo!</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo-hover">
+                        <img class="logo-image" src="./Images/Logos/logo-removebg-preview.png" alt="Logo Ensaladazo!">
+                    </div>
+                    <p>Nutrición fresca para tu vida diaria</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="Menu.html">Menú</a></li>
+                        <li><a href="Nosotros.html">Nosotros</a></li>
+                        <li><a href="Contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-info">
+                    <h4>Horarios</h4>
+                    <p>Lun - Vie: 8:00 AM - 6:00 PM</p>
+                    <p>Sábado: 9:00 AM - 4:00 PM</p>
+                    <p>Domingo: 10:00 AM - 3:00 PM</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ensaladazo!. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
